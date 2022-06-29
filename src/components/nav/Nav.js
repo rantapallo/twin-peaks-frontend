@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="navbar-topic">
         <Link to="/">
           <div className='navbar-left'>
-            <img src={owl} />
+            <img src={owl} alt="logo" />
             <h1>Twin Peaks</h1>
           </div>
         </Link>

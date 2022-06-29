@@ -1,13 +1,17 @@
 import CharacterItem from "./CharacterItem";
+import Spinner from '../Spinner'
 
 export default function CharacterGrid({chars, isLoading}) {
  
-  // return isLoading ? (<Spinner />) : (
-    return isLoading ? (<p>Loading...</p>) : (
+  if (isLoading) {
+    return <Spinner />
+  }
+   
+  return (
     <section className="cards">
       {chars.map(char => (
         <CharacterItem key={char.charid} char={char} />
       ))}
     </section>
-  );
+  )
 }

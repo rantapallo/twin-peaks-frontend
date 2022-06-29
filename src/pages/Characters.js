@@ -39,6 +39,7 @@ export default function Characters() {
   useEffect(() => {
     const filtered = filterNames(query)
     setFilteredChars(filtered)
+    // eslint-disable-next-line
   },[query])
 
   return (

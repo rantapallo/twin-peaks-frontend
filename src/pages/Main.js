@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Spinner from "../components/Spinner"
 
 
 export default function Main() {
@@ -25,10 +26,13 @@ export default function Main() {
       })
   }, [])
 
+  if (isLoading) {
+    return <Spinner />
+  }
+
   return (
     <div className="quote-container">
       {error && <p>{error}</p>}
-      {isLoading && <p>Loading...</p>}
 
       {quote && quote.quote &&
         <div className="quote-div">
